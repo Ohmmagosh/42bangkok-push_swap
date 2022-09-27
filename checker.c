@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:22:13 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/27 04:09:24 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/09/28 04:04:06 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	chk_argv(char ***av)
 		j = -1;
 		while (av[i][++j])
 		{
-			printf("chk_digit --> %d\n", chk_digit(av[i][j]));
 			if (!chk_digit(av[i][j]))
 				return (error_re(1));
 		}
@@ -49,11 +48,11 @@ int	chk_double(t_lst *p)
 	t_lst	*ptr;
 
 	ptr = p;
+
 	while (ptr)
 	{
-		printf("chk_double -> %d\n", chk_double_utils(p, ptr->data));
-		// if (!chk_double_utils(p, ptr->data))
-		// 	return (error_re(1));
+		if (!chk_double_utils(p, ptr->data))
+			return (error_re(0));
 		ptr = ptr->link;
 	}
 	return (1);
@@ -78,6 +77,8 @@ int	chk_digit(char *num)
 
 int	checker(t_var *p)
 {
-	chk_double(p->tlst);
+	chk_double(p->stack_a);
+	chk_sorted(p->stack_a);
+
 	return (1);
 }

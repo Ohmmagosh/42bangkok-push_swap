@@ -6,13 +6,11 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 18:05:25 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/26 21:18:57 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/09/28 04:04:39 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "push_swap.h"
-#include <stdlib.h>
 
 void	get_argv(t_var *p, char **av, int ac)
 {
@@ -49,13 +47,14 @@ void	create_lst(t_var *p)
 	
 	p->lst = NULL;
 	i = -1;
+	p->av = p->av + 1;
 	while (p->av[++i])
 	{
 		j = -1;
 		while (p->av[i][++j])
 		{
 			if (!p->lst)
-				p->tlst = first_lst(p, ft_atoi(p->av[i][j]));
+				p->stack_a = first_lst(p, ft_atoi(p->av[i][j]));
 			else
 			{
 				next_lst(p, ft_atoi(p->av[i][j]));
