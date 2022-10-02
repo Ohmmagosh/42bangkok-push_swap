@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 18:34:43 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 03:09:08 by psuanpro         ###   ########.fr       */
+/*   Created: 2022/10/03 04:39:38 by psuanpro          #+#    #+#             */
+/*   Updated: 2022/10/03 04:44:04 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap.c"
 
-int	main(int ac, char **av)
+void	rotate(t_var *p, int mode)
 {
-	t_var	p;
 
-	if (ac > 1)
-	{
-		if (ac == 2)
-			return (0);
-		init_push_swap(&p);
-		get_argv(&p, av, ac);
-		if (!chk_argv(p.av + 1) || !chk_argv_sp(av + 1))
-			return (0);
-		create_lst(&p);
-		checker(&p);
-		sort(&p);
-	}
-	else
-		printf("argument error\n");
-	return (0);
+}
+
+void	rotate_b(t_var *p)
+{
+
+}
+
+void	rotate_b(t_var *p)
+{
+
 }

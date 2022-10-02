@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_argv.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 18:05:25 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/28 04:04:39 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 03:07:25 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	create_lst(t_var *p)
 {
 	int	i;
 	int	j;
-	
+
 	p->lst = NULL;
 	i = -1;
 	p->av = p->av + 1;
@@ -62,4 +62,10 @@ void	create_lst(t_var *p)
 			}
 		}
 	}
+}
+
+void	init_push_swap(t_var *p)
+{
+	p->stack_a = NULL;
+	p->stack_b = NULL;
 }

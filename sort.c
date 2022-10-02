@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/28 04:33:32 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 04:39:23 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,40 @@
 
 void	sort(t_var *p)
 {
-	
-	swap_a(p);
-	swap_a(p);
+	push(p, 0);
+	push(p, 0);
+	push(p, 0);
+	push(p, 0);
+	push(p, 0);
+	push(p, 0);
+	push(p, 0);
+	push(p, 0);
+	push(p, 0);
+	push(p, 1);
+	push(p, 1);
+	push(p, 1);
+	push(p, 1);
+
+
+
+	// push_a(p);
+	printf("stack_A\n");
 	while (p->stack_a)
 	{
-		printf("p->stack_a->data --> %d\n", p->stack_a->data);
+		printf("p->stack_a %d\n", p->stack_a->data);
 		p->stack_a = p->stack_a->link;
 	}
+	printf("stack_B\n");
+	while (p->stack_b)
+	{
+		printf("p->stack_b %d\n", p->stack_b->data);
+		p->stack_b = p->stack_b->link;
+	}
+	// swap(p, 0);
+	// while (p->stack_a)
+	// {
+	// 	printf("p->stack_a->data --> %d\n", p->stack_a->data);
+	// 	p->stack_a = p->stack_a->link;
+	// }
 }
 
-void	swap_a(t_var *p)
-{
-	t_lst	*tmp;
-
-	tmp = p->stack_a->link;
-	p->stack_a->link = p->stack_a->link->link;
-	tmp->link = p->stack_a;
-	p->stack_a = tmp;
-	ft_printf("sa\n");
-}
-
-void	swap_b(t_var *p)
-{
-	t_lst	*tmp;
-
-	tmp = p->stack_b->link;
-	p->stack_b->link = p->stack_b->link->link;
-	tmp->link = p->stack_b;
-	p->stack_b = tmp;
-	ft_printf("sb\n");
-}

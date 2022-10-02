@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/28 04:33:09 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 04:43:29 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,17 @@ int		chk_double_utils(t_lst *p, int data);
 int		chk_sorted(t_lst *p);
 int		error_re(int mode);
 void	sort(t_var *p);
+void	swap(t_var *p, int mode);
 void	swap_a(t_var *p);
 void	swap_b(t_var *p);
+void	push(t_var *p, int mode);
+void	push_a(t_var *p);
+void	push_b(t_var *p);
+void	no_stack(t_var *p);
+void	got_stack(t_var *p, int mode);
+void	init_push_swap(t_var *p);
+void	rotate(t_var *p, int mode);
+void	rotate_a(t_var *p);
+void	rotate_b(t_var *p);
 
 #endif
