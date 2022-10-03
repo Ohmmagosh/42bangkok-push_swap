@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 01:49:23 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 08:16:26 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/04 04:26:25 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	push(t_var *p, int mode)
 {
 	if (mode == 0)
-		push_a(p);
+		push_a(p, 1);
 	else if (mode == 1)
-		push_b(p);
+		push_b(p, 1);
 }
 
 void	no_stack(t_var *p)
@@ -50,17 +50,29 @@ void	got_stack(t_var *p, int mode)
 	}
 }
 
-void	push_a(t_var *p)
+void	push_b(t_var *p, int mode)
 {
+	if (!p->stack_a)
+	{
+		ft_printf("pb\n");
+		return ;
+	}
 	if (!p->stack_b)
 		no_stack(p);
 	else
 		got_stack(p, 0);
-	ft_printf("pa\n");
+	if (mode == 1)
+		ft_printf("pb\n");
 }
 
-void	push_b(t_var *p)
+void	push_a(t_var *p , int mode)
 {
+	if (!p->stack_b)
+	{
+		ft_printf("pa\n");
+		return ;
+	}
 	got_stack(p,1);
-	ft_printf("pa\n");
+	if (mode == 1)
+		ft_printf("pa\n");
 }

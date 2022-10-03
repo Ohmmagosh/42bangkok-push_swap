@@ -6,7 +6,7 @@
 #    By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 00:28:30 by psuanpro          #+#    #+#              #
-#    Updated: 2022/10/03 10:16:09 by psuanpro         ###   ########.fr        #
+#    Updated: 2022/10/04 04:07:02 by psuanpro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC = push_swap.c \
 	  swap.c \
 	  push.c \
 	  rotate.c \
+	  reverse_rotate.c
 
 LIBDIR = ./libft
 
@@ -47,4 +48,6 @@ re: fclean all
 
 t:
 	./push_swap "12 234 456 24 -1" -23 78 69 80
+t1:
+	./push_swap "12" -23 78
 .PHONY: all clean fclean re
