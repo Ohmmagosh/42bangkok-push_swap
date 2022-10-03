@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 04:39:38 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 09:44:08 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 10:15:34 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,20 @@
 void	rotate(t_var *p, int mode)
 {
 	if (mode == 0)
+	{
 		rotate_a(p);
+		printf("ra\n");
+	}
 	else if (mode == 1)
+	{
 		rotate_b(p);
+		ft_printf("rb\n");
+	}
+	else if (mode == 2)
+	{
+		rotate_ab(p);
+		ft_printf("rr\n")
+	}
 }
 
 t_lst	*lstlast(t_lst *p)
@@ -42,7 +53,6 @@ void	rotate_a(t_var *p)
 	p->stack_a = p->stack_a->link;
 	tmpl->link = tmp;
 	tmpl->link->link = NULL;
-	ft_printf("ra\n");
 }
 
 void	rotate_b(t_var *p)
@@ -55,5 +65,10 @@ void	rotate_b(t_var *p)
 	p->stack_b = p->stack_b->link;
 	tmpl->link = tmp;
 	tmpl->link->link = NULL;
-	ft_printf("rb\n");
+}
+
+void	rotate_ab(t_var *P)
+{
+	rotate_a(p);
+	rotate_b(p);
 }
