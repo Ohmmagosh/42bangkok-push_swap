@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   multi_opt.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 14:39:39 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 09:53:15 by psuanpro         ###   ########.fr       */
+/*   Created: 2022/10/03 09:46:32 by psuanpro          #+#    #+#             */
+/*   Updated: 2022/10/03 09:52:56 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# endif
+//ss
+void	swap_ab(t_var *p)
+{
 
-int		ft_len_nl_gnl(char *s);
-int		ft_strlen_gnl(char *s);
-int		ft_chk_stash_gnl(char *s);
-char	*ft_strjoin_gnl(char *s1, char *s2);
-char	*ft_strcpy_gnl(char *s);
-char	*ft_clear_stash_gnl(char *s);
-char	*get_next_line(int fd);
+}
 
-#endif
+//rr
+void	rotate_ab(t_var *P)
+{
+
+}
+
+//rrr
+void	reverse_ab(t_var *p)
+{
+
+}

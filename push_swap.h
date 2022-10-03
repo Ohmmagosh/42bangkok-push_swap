@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 04:43:29 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 09:24:32 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_var
 	char	***av;
 	t_lst	*lst;
 	t_lst	*stack_a;
+	t_lst	*head_a;
 	t_lst	*stack_b;
 }				t_var;
 
@@ -56,5 +57,5 @@ void	init_push_swap(t_var *p);
 void	rotate(t_var *p, int mode);
 void	rotate_a(t_var *p);
 void	rotate_b(t_var *p);
-
+t_lst	*lstlast(t_lst *p);
 #endif
