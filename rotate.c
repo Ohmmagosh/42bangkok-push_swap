@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 04:39:38 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 10:15:34 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 10:19:03 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	rotate(t_var *p, int mode)
 	else if (mode == 2)
 	{
 		rotate_ab(p);
-		ft_printf("rr\n")
+		ft_printf("rr\n");
 	}
 }
 
@@ -67,7 +67,7 @@ void	rotate_b(t_var *p)
 	tmpl->link->link = NULL;
 }
 
-void	rotate_ab(t_var *P)
+void	rotate_ab(t_var *p)
 {
 	rotate_a(p);
 	rotate_b(p);

@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 09:24:32 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 10:18:40 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,6 @@ void	rotate(t_var *p, int mode);
 void	rotate_a(t_var *p);
 void	rotate_b(t_var *p);
 t_lst	*lstlast(t_lst *p);
+void	rotate_ab(t_var *p);
+void	swap_ab(t_var *p);
 #endif

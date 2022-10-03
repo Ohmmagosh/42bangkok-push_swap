@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 14:39:39 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 09:53:15 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/03 10:07:43 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <stdio.h>
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
