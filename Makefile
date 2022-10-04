@@ -6,7 +6,7 @@
 #    By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 00:28:30 by psuanpro          #+#    #+#              #
-#    Updated: 2022/10/04 04:07:02 by psuanpro         ###   ########.fr        #
+#    Updated: 2022/10/05 05:23:18 by psuanpro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,10 @@ NAME = push_swap
 
 SRC = push_swap.c \
 	  get_argv.c \
-	  checker.c \
+	  chk.c \
 	  checker_utils.c \
 	  sort.c \
+	  sort_utils.c \
 	  swap.c \
 	  push.c \
 	  rotate.c \

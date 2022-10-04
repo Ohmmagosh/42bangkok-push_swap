@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 18:05:25 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/03 03:07:25 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/05 03:56:13 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	next_lst(t_var *p, int data)
 	ptr->data = data;
 	ptr->link = NULL;
 	p->lst->link = ptr;
+	p->len++;
 }
 
 t_lst	*first_lst(t_var *p, int data)
@@ -37,6 +38,7 @@ t_lst	*first_lst(t_var *p, int data)
 	p->lst = (t_lst *)malloc(sizeof(t_lst));
 	p->lst->data = data;
 	p->lst->link = NULL;
+	p->len++;
 	return (p->lst);
 }
 
@@ -68,4 +70,5 @@ void	init_push_swap(t_var *p)
 {
 	p->stack_a = NULL;
 	p->stack_b = NULL;
+	p->len = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/04 04:32:05 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/05 05:06:44 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ typedef struct s_var
 	t_lst	*lst;
 	t_lst	*stack_a;
 	t_lst	*stack_b;
+	int		len;
+	int		first;
+	int		secound;
+	int		last;
 }				t_var;
 
 t_lst	*first_lst(t_var *p, int data);
@@ -39,7 +43,7 @@ int		chk_digit(char *num);
 int		chk_argv_sp(char **av);
 int		chk_double(t_lst *p);
 int		chk_double_utils(t_lst *p, int data);
-int		chk_sorted(t_lst *p);
+int		chk_sorted(t_lst *p, int mode);
 int		error_re(int mode);
 void	init_push_swap(t_var *p);
 void	get_argv(t_var *p,char **av, int ac);
@@ -64,5 +68,11 @@ void	reverse_rotate_b(t_var *p, int mode);
 void	reverse_rotate_ab(t_var *p, int mode);
 void	sort_three(t_var *p);
 void	sort_five(t_var *p);
+void	setintdex(t_var *p);
+int		firstindex(t_lst *p);
+int		secoundindex(t_lst *p);
+int		lastindex(t_lst *p);
+int		lenlst(t_lst *p);
+void	print_stack(t_lst *p, t_lst *b);
 
 #endif

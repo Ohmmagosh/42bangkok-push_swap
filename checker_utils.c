@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 02:26:31 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/28 03:18:49 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/05 05:08:28 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	chk_double_utils(t_lst *p, int data)
 {
 	t_lst	*ptr;
 	int	len;
-	
+
 	len = 0;
 	ptr = p;
 	while (ptr)
@@ -43,10 +43,10 @@ int	error_re(int mode)
 	exit (0);
 }
 
-int	chk_sorted(t_lst *p)
+int	chk_sorted(t_lst *p, int mode)
 {
 	t_lst *ptr;
-	
+
 	ptr = p;
 	ptr = ptr->link;
 	while (p)
@@ -55,13 +55,13 @@ int	chk_sorted(t_lst *p)
 		{
 			ptr = ptr->link;
 			p = p->link;
-			if (ptr == NULL)
+			if (ptr == NULL && mode == 0)
 				return(error_re(8));
+			else if (ptr == NULL && mode == 1)
+				return (0);
 		}
-		else 
-		{
+		else
 			break;
-		}
 	}
 	return (1);
 }

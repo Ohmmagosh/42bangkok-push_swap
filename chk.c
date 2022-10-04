@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:22:13 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/28 04:04:06 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/05 04:22:11 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	chk_digit(char *num)
 int	checker(t_var *p)
 {
 	chk_double(p->stack_a);
-	chk_sorted(p->stack_a);
+	chk_sorted(p->stack_a, 0);
 
 	return (1);
 }

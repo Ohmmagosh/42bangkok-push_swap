@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 01:43:26 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/04 04:27:38 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/05 05:35:18 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	swap_a(t_var *p, int mode)
 
 	if (!p->stack_a)
 	{
-		ft_printf("pa\n");
+		ft_printf("sa\n");
 		return ;
 	}
 	tmp = p->stack_a->link;
@@ -36,7 +36,7 @@ void	swap_a(t_var *p, int mode)
 	tmp->link = p->stack_a;
 	p->stack_a = tmp;
 	if (mode == 1)
-		ft_printf("pa\n");
+		ft_printf("sa\n");
 }
 
 void	swap_b(t_var *p, int mode)
@@ -45,7 +45,7 @@ void	swap_b(t_var *p, int mode)
 
 	if (!p->stack_b)
 	{
-		ft_printf("pb\n");
+		ft_printf("sb\n");
 		return ;
 	}
 	tmp = p->stack_b->link;
@@ -53,7 +53,7 @@ void	swap_b(t_var *p, int mode)
 	tmp->link = p->stack_b;
 	p->stack_b = tmp;
 	if (mode == 1)
-		ft_printf("pb\n");
+		ft_printf("sb\n");
 }
 
 void	swap_ab(t_var *p, int mode)
