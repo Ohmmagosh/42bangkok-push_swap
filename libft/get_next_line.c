@@ -6,7 +6,7 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 14:39:10 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/05 05:41:58 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/05 06:08:13 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*get_next_line(int fd)
 	int			rd;
 	char		*ret;
 	char		*buffer;
-	static char	*str[OPEN_MAX];
+	static char	*str[FOPEN_MAX];
 
 	rd = 1;
 	ret = NULL;
