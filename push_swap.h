@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/05 05:06:44 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/06 18:19:58 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "./libft/libft.h"
+
+typedef struct	s_val
+{
+	int		min;
+	int		max;
+	int		pmin;
+	int		pmax;
+	int		lminmax;
+}				t_val;
 
 typedef struct	s_lst
 {
@@ -33,6 +42,8 @@ typedef struct s_var
 	int		first;
 	int		secound;
 	int		last;
+	t_val	v;
+	
 }				t_var;
 
 t_lst	*first_lst(t_var *p, int data);
@@ -68,11 +79,13 @@ void	reverse_rotate_b(t_var *p, int mode);
 void	reverse_rotate_ab(t_var *p, int mode);
 void	sort_three(t_var *p);
 void	sort_five(t_var *p);
-void	setintdex(t_var *p);
+void	setintdex(t_var *p, int mode);
 int		firstindex(t_lst *p);
-int		secoundindex(t_lst *p);
-int		lastindex(t_lst *p);
-int		lenlst(t_lst *p);
 void	print_stack(t_lst *p, t_lst *b);
+int		lenlst(t_lst *p);
+int		find_pos(t_lst *p, int mode);
+void	find_value(t_var *p);
+int		find_minmax(t_lst *p, int mode);
+int		findpos_minmax(t_lst *p, int data);
 
 #endif

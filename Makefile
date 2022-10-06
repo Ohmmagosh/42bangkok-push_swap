@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 00:28:30 by psuanpro          #+#    #+#              #
-#    Updated: 2022/10/05 05:23:18 by psuanpro         ###   ########.fr        #
+#    Updated: 2022/10/06 17:35:34 by psuanpro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC = push_swap.c \
 	  checker_utils.c \
 	  sort.c \
 	  sort_utils.c \
+	  sort_utils_1.c \
 	  swap.c \
 	  push.c \
 	  rotate.c \
@@ -32,7 +33,7 @@ CFLAGS = -Wall -Wextra -Werror
 COMPILE = echo "Push_swap Compiled..."
 $(NAME): $(OBJ)
 	@make -C $(LIBDIR)
-	@$(CC) $(CFLAGS) $(SRC) $(OBJ) -o $(NAME) $(INCLUDE)
+	@$(CC) $(CFLAGS) $(SRC) $(OBJ) -o $(NAME) $(INCLUDE) -g
 	@$(COMPILE)
 
 all: $(NAME)

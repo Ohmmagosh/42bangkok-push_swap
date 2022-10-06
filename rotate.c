@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 04:39:38 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/04 04:01:58 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/05 16:37:26 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ t_lst	*lstlast(t_lst *p, int mode)
 {
 	t_lst	*tmp;
 
+	tmp = NULL;
 	if (!p)
 		return (NULL);
 	if (mode == 0)
