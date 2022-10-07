@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/06 18:19:58 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/07 20:01:05 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct	s_val
 	int		pmin;
 	int		pmax;
 	int		lminmax;
+	int		nmin;
+	int		flag;
 }				t_val;
 
 typedef struct	s_lst
@@ -38,11 +40,11 @@ typedef struct s_var
 	t_lst	*lst;
 	t_lst	*stack_a;
 	t_lst	*stack_b;
+	t_val	v;
 	int		len;
 	int		first;
 	int		secound;
 	int		last;
-	t_val	v;
 	
 }				t_var;
 
@@ -87,5 +89,6 @@ int		find_pos(t_lst *p, int mode);
 void	find_value(t_var *p);
 int		find_minmax(t_lst *p, int mode);
 int		findpos_minmax(t_lst *p, int data);
+int		find_nextmin(t_lst *p, int min);
 
 #endif

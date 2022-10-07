@@ -6,16 +6,21 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/06 21:48:46 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/07 20:14:57 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/ft_printf.h"
 #include "push_swap.h"
 
 void	sort(t_var *p)
 {
-	
 	sort_five(p);
+	// push(p, 1);
+	// push(p, 1);
+	// // rotate(p, 3);
+	// print_stack(p->stack_a, p->stack_b);
+	// sort_five(p);
 	
 	// sort_five(p);
 	// if (p->len == 3 && p->len < 5)
@@ -35,11 +40,11 @@ void	sort_three(t_var *p)
 	{
 		setintdex(p, 0);
 		if (p->first > p->secound && p->first > p->last)
-			rotate_a(p, 1);
+			rotate(p, 0);
 		else if (p->secound > p->first && p->secound > p->last)
-			swap_a(p, 1);
+			swap(p, 0);
 		else if (p->last > p->first && p->last > p->secound)
-			swap_a(p, 1);
+			swap(p, 0);
 	}
 }
 
@@ -51,40 +56,44 @@ void	print_stack(t_lst *p, t_lst *b)
 		ft_printf("p->data %d\n", p->data);
 		p = p->link;
 	}
+	ft_printf("-----------------------------\n");
 	ft_printf("stack_B\n");
 	while (b)
 	{
-		ft_printf("p->stack_b %d\n", b->data);
+		ft_printf("p->data %d\n", b->data);
 		b = b->link;
 	}
+	ft_printf("-----------------------------\n");
 }
 
 void	sort_five(t_var *p)
 {
-	int	flag;
-
-	flag = 0;
-	while(chk_sorted(p->stack_a, 1) == 1 || lenlst(p->stack_b) != 0)
+	while (chk_sorted(p->stack_a, 1) == 1 || lenlst(p->stack_a) != 5)
 	{
-		find_value(p);
-		if (p->first == p->v.min && flag < 2)
+		if (p->v.flag != 2)
 		{
-			push_b(p, 1);
 			find_value(p);
-			flag++;
+			setintdex(p, 0);
+			if (p->first != p->v.min)
+			{
+				printf("p->pmin  %d p->pmax %d\n", p->v.pmin, p->v.pmax);
+				if (p->v.pmin < lenlst(p->stack_a) / 2)
+					rotate(p, 0);
+				else if (p->v.pmin > lenlst(p->stack_a) / 2 && p->v.pmin == lenlst(p->stack_a))
+					rotate(p, 3);
+			}
+			else
+			{
+			 	push(p, 1);
+				p->v.flag++;
+			}
 		}
-		else if (p->v.pmin < lenlst(p->stack_a) / 2 && p->first != p->v.min)
-			rotate_a(p, 1);
-		else if (p->v.pmin > lenlst(p->stack_a) / 2 && p->first != p->v.min)
-			reverse_rotate_a(p, 1);
-		if (flag == 2)
-		{
-			sort_three(p);
-			push_a(p, 1);
-			push_a(p, 1);
-		}
+		else if (chk_sorted( p->stack_a, 1) == 0 && p->v.flag == 2)
+			push(p, 0);
+		else
+		 	sort_three(p);
 		print_stack(p->stack_a, p->stack_b);
-		sleep(2);
+		sleep(3);
 	}
 }
 
