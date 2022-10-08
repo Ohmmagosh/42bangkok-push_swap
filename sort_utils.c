@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 03:59:36 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/06 20:26:47 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/08 22:49:01 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,14 @@ int	find_pos(t_lst *p, int mode)
 	}
 	return (0);
 }
+
 void	find_value(t_var *p)
 {
 	p->v.min = find_minmax(p->stack_a, 0);
 	p->v.max = find_minmax(p->stack_a, 1);
 	p->v.pmin = findpos_minmax(p->stack_a, p->v.min);
 	p->v.pmax = findpos_minmax(p->stack_a, p->v.max);
+	p->v.nmin = find_nextmin(p->stack_a, p->v.min);
 }
 
 int	find_minmax(t_lst *p, int mode)
