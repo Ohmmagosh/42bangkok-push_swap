@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:35:40 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/08 23:44:02 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/09 19:53:51 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,17 @@
 
  int	find_nextmin(t_lst *p, int min)
  {
-	int	nmin;
+	long	nmin;
 
-	nmin = p->data;
+	nmin = 2147483648;
+	printf("      nmin %lu min %d\n", nmin, min);
 	while (p)
 	{
-		if (nmin > p->data && p->data > min)
+		if (p->data < nmin && p->data > min)
 			nmin = p->data;
 		p = p->link;
 	}
-	return (nmin);
+	return ((int)nmin);
  }
 
 void	sort_five_utils(t_var *p)
@@ -72,4 +73,24 @@ void	sort_five_utils_1(t_var *p)
 		else
 			rotate(p, 3);
 	}
+}
+int	find_pos_utils(t_lst *p, int mode)
+{
+	while (p)
+	{
+		if (mode == 0)
+			return (p->pos);
+		else if(mode == 1)
+		{
+			p = p->link;
+			return (p->pos);
+		}
+		else if(mode == 2)
+		{
+			if (p->link == NULL)
+				return (p->pos);
+		}
+		p = p->link;
+	}
+	return (0);
 }

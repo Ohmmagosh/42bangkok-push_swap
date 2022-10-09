@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/09 01:12:54 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/09 15:52:26 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void	sort_ten(t_var *p);
 void	sort_ten_utils(t_var *p);
 void	sort_ten_utils_1(t_var *p);
 void	set_static(t_var *p);
+int		find_pos_utils(t_lst *p, int mode);
 t_lst	*find_lst(t_lst *p, int data);
 
 #endif

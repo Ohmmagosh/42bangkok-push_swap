@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:34:43 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/05 04:27:01 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/09 19:59:58 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "libft/libft.h"
 
 int	main(int ac, char **av)
 {
@@ -27,6 +28,6 @@ int	main(int ac, char **av)
 		sort(&p);
 	}
 	else
-		printf("argument error\n");
+		ft_putstr_fd("Error\n", 2);
 	return (0);
 }

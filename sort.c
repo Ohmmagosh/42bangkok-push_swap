@@ -6,16 +6,19 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/08 23:26:03 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/09 19:56:15 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/ft_printf.h"
 #include "push_swap.h"
 
 void	sort(t_var *p)
 {
-	set_static(p);
+	// int nmin;
+
+	find_value(p);
+	
+	// sort_ten(p);
 	// if (lenlst(p->stack_a) == 2)
 	// 	swap(p, 0);
 	// else if (lenlst(p->stack_a) == 3)

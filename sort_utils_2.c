@@ -6,20 +6,14 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:02:03 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/09 01:14:00 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/09 16:53:25 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_hungred(t_var *p)
-{
-	(void)p;
-}
-
 void	sort_ten(t_var *p)
 {
-	
 	while (chk_sorted(p->stack_a, 1) == 1 || lenlst(p->stack_a) != 100)
 	{
 		if (p->v.flag10 != 95)
@@ -31,40 +25,39 @@ void	sort_ten(t_var *p)
 		else
 		 	sort_five(p);
 	}
-	// print_stack(p->stack_a, p->stack_b);
 }
 
 void	sort_ten_utils(t_var *p)
 {
-	find_value(p);
-	setintdex(p, 0);
-	if(p->first != p->v.min)
-		sort_ten_utils_1(p);
-	else
-	{
-		push(p, 1);
-		p->v.flag10++;
-	}
-}
+	int	counter;
 
-void	sort_ten_utils_1(t_var *p)
-{
-	if (p->v.pmin <= lenlst(p->stack_a) / 2)
+	counter = 1;
+	set_static(p);
+	while (p->stack_a)
 	{
-		if (p->first == p->v.nmin)
-			swap(p, 0);
-		else if (p->first != p->v.min)
-			rotate(p, 0);
-		else
-			rotate(p, 0);
+		printf("data %d pos %d\n", p->stack_a->data, p->stack_a->pos);
+		p->stack_a = p->stack_a->link;
 	}
-	else 
-	{
-		if (p->first == p->v.nmin)
-			swap(p, 0);
-		else
-			rotate(p, 3);
-	}
+	// while (counter < 19)
+	// {
+	// 	setintdex(p, 2);
+	// 	printf("p->first %d\n", p->first);
+	// 	if (p->first <= 10)
+	// 	{
+	// 		push(p, 1);
+	// 		counter++;
+	// 	}
+	// 	else if (p->first >= 10 && p->first <= 19)
+	// 	{
+	// 		push(p, 1);
+	// 		counter++;
+	// 	}
+	// 	else 
+	// 		rotate(p, 0);
+	// }
+	// print_stack(p->stack_a, p->stack_b);
+	// exit(0);
+	
 }
 
 void	set_static(t_var *p)
@@ -76,25 +69,28 @@ void	set_static(t_var *p)
 	find_value(p);
 	tmp = find_lst(p->stack_a, p->v.min);
 	tmp->pos = counter;
+	printf("tmp ->data %d\n", tmp->data);
 	p->v.nmin = p->v.min;
 	while (counter < lenlst(p->stack_a))
 	{
+		printf("nmin %d\n", p->v.nmin);
 		counter++;
 		tmp = find_lst(p->stack_a, p->v.nmin);
 		tmp->pos = counter;
+		p->v.nmin = find_nextmin(p->stack_a, p->v.nmin);
+		printf("nmin %d\n", p->v.nmin);
+		
 	}
 }
 
 t_lst	*find_lst(t_lst *p, int data)
 {
-	t_lst	*tmp;
-
-	tmp = NULL;
 	while (p)
 	{
 		if (p->data == data)
-			tmp = p;
+			break;
 		p = p->link;
 	}
-	return (tmp);
+	printf("p->data return %d data %d\n", p->data, data);
+	return (p);
 }
