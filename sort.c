@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/09 19:56:15 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:09:20 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	sort(t_var *p)
 {
+	sort_ten(p);
 	// int nmin;
 
-	find_value(p);
-	
+	// sort_ten(p);
 	// sort_ten(p);
 	// if (lenlst(p->stack_a) == 2)
 	// 	swap(p, 0);
@@ -80,8 +80,6 @@ void	sort_five(t_var *p)
 			push(p, 0);
 		else
 		 	sort_three(p);
-		// print_stack(p->stack_a, p->stack_b);
-		// sleep(3);
 	}
 }
 

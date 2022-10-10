@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:35:40 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/09 19:53:51 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/10 14:11:41 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@
 	long	nmin;
 
 	nmin = 2147483648;
-	printf("      nmin %lu min %d\n", nmin, min);
 	while (p)
 	{
 		if (p->data < nmin && p->data > min)

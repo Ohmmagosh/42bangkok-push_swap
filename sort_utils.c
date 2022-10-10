@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 03:59:36 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/09 15:54:24 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:29:19 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,14 @@ void	setintdex(t_var *p, int mode)
 	else if (mode == 2)
 	{
 		p->first = find_pos_utils(p->stack_a, 0);
-		p->secound = find_pos_utils(p->stack_a, 2);
+		p->secound = find_pos_utils(p->stack_a, 1);
 		p->last = find_pos_utils(p->stack_a, 2);
+	}
+	else if (mode == 3)
+	{
+		p->first = find_pos_utils(p->stack_b, 0);
+		p->secound = find_pos_utils(p->stack_b, 1);
+		p->last = find_pos_utils(p->stack_b, 2);
 	}
 }
 
