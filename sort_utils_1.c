@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:35:40 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/10 14:11:41 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/11 20:19:14 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@
 
 void	sort_five_utils(t_var *p)
 {
-	find_value(p);
+	find_value(p, 0);
 	setintdex(p, 0);
 	if (p->first != p->v.min)
 		sort_five_utils_1(p);
@@ -73,6 +73,7 @@ void	sort_five_utils_1(t_var *p)
 			rotate(p, 3);
 	}
 }
+
 int	find_pos_utils(t_lst *p, int mode)
 {
 	while (p)

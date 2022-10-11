@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/10 15:09:20 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/11 20:06:44 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sort(t_var *p)
 {
-	sort_ten(p);
+	sort_hundred(p);
 	// int nmin;
 
 	// sort_ten(p);
@@ -72,6 +72,7 @@ void	print_stack(t_lst *p, t_lst *b)
 
 void	sort_five(t_var *p)
 {
+	p->v.flag = 0;
 	while (chk_sorted(p->stack_a, 1) == 1 || lenlst(p->stack_a) != 5)
 	{
 		if (p->v.flag != 2)

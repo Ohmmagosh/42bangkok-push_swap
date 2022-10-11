@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 03:59:36 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/10 15:29:19 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/11 20:03:51 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,24 @@ int	find_pos(t_lst *p, int mode)
 	return (0);
 }
 
-void	find_value(t_var *p)
+void	find_value(t_var *p, int mode)
 {
-	p->v.min = find_minmax(p->stack_a, 0);
-	p->v.max = find_minmax(p->stack_a, 1);
-	p->v.pmin = findpos_minmax(p->stack_a, p->v.min);
-	p->v.pmax = findpos_minmax(p->stack_a, p->v.max);
-	p->v.nmin = find_nextmin(p->stack_a, p->v.min);
+	if (mode == 0)
+	{
+		p->v.min = find_minmax(p->stack_a, 0);
+		p->v.max = find_minmax(p->stack_a, 1);
+		p->v.pmin = findpos_minmax(p->stack_a, p->v.min);
+		p->v.pmax = findpos_minmax(p->stack_a, p->v.max);
+		p->v.nmin = find_nextmin(p->stack_a, p->v.min);
+	}
+	else if (mode == 1)
+	{
+		p->v.min = find_minmax(p->stack_b, 0);
+		p->v.max = find_minmax(p->stack_b, 1);
+		p->v.pmin = findpos_minmax(p->stack_b, p->v.min);
+		p->v.pmax = findpos_minmax(p->stack_b, p->v.max);
+		p->v.nmin = find_nextmin(p->stack_b, p->v.min);
+	}
 }
 
 int	find_minmax(t_lst *p, int mode)

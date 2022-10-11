@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/10 18:03:17 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/11 20:20:20 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,19 +88,19 @@ int		firstindex(t_lst *p);
 void	print_stack(t_lst *p, t_lst *b);
 int		lenlst(t_lst *p);
 int		find_pos(t_lst *p, int mode);
-void	find_value(t_var *p);
+void	find_value(t_var *p, int mode);
 int		find_minmax(t_lst *p, int mode);
 int		findpos_minmax(t_lst *p, int data);
 int		find_nextmin(t_lst *p, int min);
 void	sort_five_utils(t_var *p);
 void	sort_five_utils_1(t_var *p);
 void	sort_hundred(t_var *p);
-void	sort_ten(t_var *p);
-void	sort_ten_utils(t_var *p);
-void	sort_ten_utils_1(t_var *p);
+void	sort_hundred_utils(t_var *p);
+void	sort_hundred_utils_1(t_var *p);
 void	set_static(t_var *p);
 int		find_pos_utils(t_lst *p, int mode);
 void	mani_stackb(t_var *p, int mid);
+void	sort_5hundred(t_var *p);
 t_lst	*find_lst(t_lst *p, int data);
 
 #endif
