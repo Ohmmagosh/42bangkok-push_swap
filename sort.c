@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/11 20:06:44 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/11 21:54:56 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	sort(t_var *p)
 {
-	sort_hundred(p);
+	// sort_hundred(p);
+	sort_5hundred(p);
 	// int nmin;
 
 	// sort_ten(p);

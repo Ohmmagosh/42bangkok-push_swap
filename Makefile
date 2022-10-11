@@ -6,7 +6,7 @@
 #    By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 00:28:30 by psuanpro          #+#    #+#              #
-#    Updated: 2022/10/08 15:55:25 by psuanpro         ###   ########.fr        #
+#    Updated: 2022/10/11 22:06:49 by psuanpro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC = push_swap.c \
 	  sort_utils.c \
 	  sort_utils_1.c \
 	  sort_utils_2.c \
+	  sort_utils_3.c \
 	  swap.c \
 	  push.c \
 	  rotate.c \

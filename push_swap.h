@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/11 20:20:20 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/11 22:06:34 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ typedef struct	s_val
 	int		lminmax;
 	int		nmin;
 	int		flag;
-	int		flag10;
+	int		flag100;
+	int		flag500;
 }				t_val;
 
 typedef struct	s_lst
@@ -52,6 +53,7 @@ typedef struct s_var
 
 t_lst	*first_lst(t_var *p, int data);
 t_lst	*lstlast(t_lst *p, int mode);
+t_lst	*find_lst(t_lst *p, int data);
 int		chk_argv(char ***av);
 int		checker(t_var *p);
 int		chk_digit(char *num);
@@ -101,6 +103,7 @@ void	set_static(t_var *p);
 int		find_pos_utils(t_lst *p, int mode);
 void	mani_stackb(t_var *p, int mid);
 void	sort_5hundred(t_var *p);
-t_lst	*find_lst(t_lst *p, int data);
+void	sort_5hundred_utils(t_var *p);
+void	mani_stackb_500(t_var *p, int mid);
 
 #endif
