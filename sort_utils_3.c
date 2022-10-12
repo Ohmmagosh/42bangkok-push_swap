@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:21:11 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/12 01:55:20 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:01:50 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,38 @@ void	mani_stackb_500(t_var *p, int mid)
 		setintdex(p, 3);
 		if (p->first < mid)
 			rotate(p, 1);
+	}
+}
+
+void	sort_universe_utils(t_var *p)
+{
+	find_value(p, 0);
+	setintdex(p, 0);
+	if (p->first != p->v.min)
+		sort_universe_utils_1(p);
+	else
+	{
+		push(p, 1);
+		p->v.flaguni++;
+	}
+}
+
+void	sort_universe_utils_1(t_var *p)
+{
+	if (p->v.pmin <= lenlst(p->stack_a) / 2)
+	{
+		if (p->first == p->v.nmin)
+			swap(p, 0);
+		else if (p->first != p->v.min)
+			rotate(p, 0);
+		else
+			rotate(p, 0);
+	}
+	else 
+	{
+		if (p->first == p->v.nmin)
+			swap(p, 0);
+		else
+			rotate(p, 3);
 	}
 }

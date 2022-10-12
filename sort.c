@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/11 21:54:56 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:13:07 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,18 @@
 
 void	sort(t_var *p)
 {
-	// sort_hundred(p);
-	sort_5hundred(p);
-	// int nmin;
-
-	// sort_ten(p);
-	// sort_ten(p);
-	// if (lenlst(p->stack_a) == 2)
-	// 	swap(p, 0);
-	// else if (lenlst(p->stack_a) == 3)
-		// sort_three(p);
-	// else if (lenlst(p->stack_a) == 5)
-	// 	sort_five(p);
-	// else if (lenlst(p->stack_a) == 10)
-	// sort_ten(p);
-	// else if (lenlst(p->stack_a) == 100)
-	// sort_hundred(p);
-	// push(p, 1);
-	// push(p, 1);
-	// // rotate(p, 3);
-	// print_stack(p->stack_a, p->stack_b);
-	// sort_five(p);
-	
-	
+	if (lenlst(p->stack_a) == 2)
+		swap(p, 0);
+	else if (lenlst(p->stack_a) == 3)
+		sort_three(p);
+	else if (lenlst(p->stack_a) == 5)
+		sort_five(p);
+	else if (lenlst(p->stack_a) == 100)
+		sort_hundred(p);
+	else if (lenlst(p->stack_a) == 500)
+		sort_5hundred(p);
+	else
+		sort_universe(p, lenlst(p->stack_a));
 }
 
 void	sort_three(t_var *p)
@@ -84,4 +73,20 @@ void	sort_five(t_var *p)
 		 	sort_three(p);
 	}
 }
+
+void	sort_universe(t_var *p, int len)
+{
+	
+	p->v.flaguni = 0;
+	while (chk_sorted(p->stack_a, 1) == 1 || lenlst(p->stack_a) != len)
+	{
+		if (p->v.flaguni != len - 3)
+			sort_universe_utils(p);
+		else if (chk_sorted(p->stack_a, 1) == 0 && p->v.flaguni == len - 3)
+			push(p, 0);
+		else
+			sort_three(p);
+	}
+}
+
 

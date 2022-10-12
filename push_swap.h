@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/11 22:06:34 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/12 19:39:27 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct	s_val
 	int		flag;
 	int		flag100;
 	int		flag500;
+	int		flaguni;
 }				t_val;
 
 typedef struct	s_lst
@@ -105,5 +106,8 @@ void	mani_stackb(t_var *p, int mid);
 void	sort_5hundred(t_var *p);
 void	sort_5hundred_utils(t_var *p);
 void	mani_stackb_500(t_var *p, int mid);
+void	sort_universe(t_var *p, int len);
+void	sort_universe_utils(t_var *p);
+void	sort_universe_utils_1(t_var *p);
 
 #endif
