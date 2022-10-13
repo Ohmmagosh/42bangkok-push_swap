@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 02:26:31 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 23:05:32 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/13 23:22:13 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	error_re(int mode, t_var *p)
 {
 	if (mode == 0)
 	{
-		ft_putstr_fd("Error\n", 2);
 		free_three_di(p);
 	}
 	else if (mode == 1)
