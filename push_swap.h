@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/12 19:39:27 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/13 22:38:25 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int		chk_argv_sp(char **av);
 int		chk_double(t_lst *p);
 int		chk_double_utils(t_lst *p, int data);
 int		chk_sorted(t_lst *p, int mode);
-int		error_re(int mode);
+int		error_re(int mode, t_var *p);
 void	init_push_swap(t_var *p);
 void	get_argv(t_var *p,char **av, int ac);
 void	create_lst(t_var *p);
@@ -109,5 +109,11 @@ void	mani_stackb_500(t_var *p, int mid);
 void	sort_universe(t_var *p, int len);
 void	sort_universe_utils(t_var *p);
 void	sort_universe_utils_1(t_var *p);
+void	free_three_di(t_var *p);
+void	free_three_di_utils(t_var *p);
+void	free_lst(t_var *p);
+void	free_success(t_var *p);
+int		ft_atoi_ps(const char *str, t_var *p);
+void	chk_onearg(t_var *p);
 
 #endif

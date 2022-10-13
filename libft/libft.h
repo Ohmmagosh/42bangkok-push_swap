@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 13:38:19 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/28 03:01:41 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/13 21:47:50 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
 int		ft_lstsize(t_list *lst);
-int		error_re(int mode);
 char	*ft_strdup(char *s1);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
@@ -68,4 +67,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 #endif

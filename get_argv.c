@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_argv.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 18:05:25 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/05 03:56:13 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/13 22:02:12 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	get_argv(t_var *p, char **av, int ac)
 {
 	int i = -1;
 
-	p->av = (char ***)malloc(sizeof(char **) * ac);
+	p->av = (char ***)malloc(sizeof(char **) * (ac + 1));
+	if (!p->av)
+		return ;
 	while (av[++i])
 		p->av[i] = ft_split(av[i], ' ');
 	p->av[i] = NULL;
@@ -56,10 +58,10 @@ void	create_lst(t_var *p)
 		while (p->av[i][++j])
 		{
 			if (!p->lst)
-				p->stack_a = first_lst(p, ft_atoi(p->av[i][j]));
+				p->stack_a = first_lst(p, ft_atoi_ps(p->av[i][j], p));
 			else
 			{
-				next_lst(p, ft_atoi(p->av[i][j]));
+				next_lst(p, ft_atoi_ps(p->av[i][j], p));
 				p->lst = p->lst->link;
 			}
 		}

@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 23:27:37 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/09/28 03:13:19 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/13 21:44:38 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	if (number > 2147483647 || number < -2147483648 )
-		return (error_re(3));
+		return (0);
 	return (opt * number);
 }

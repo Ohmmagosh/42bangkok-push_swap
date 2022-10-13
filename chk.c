@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   chk.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:22:13 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/05 04:22:11 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/13 22:17:06 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
 # include "push_swap.h"
 
-int		chk_argv_sp(char **av)
+int	chk_argv_sp(char **av)
 {
 	int	i;
 
@@ -37,7 +38,10 @@ int	chk_argv(char ***av)
 		while (av[i][++j])
 		{
 			if (!chk_digit(av[i][j]))
-				return (error_re(1));
+			{
+				ft_putstr_fd("Error\n", 2);
+				return (0);
+			}
 		}
 	}
 	return (1);
@@ -52,7 +56,10 @@ int	chk_double(t_lst *p)
 	while (ptr)
 	{
 		if (!chk_double_utils(p, ptr->data))
-			return (error_re(0));
+		{
+			ft_putstr_fd("Error\n", 2);
+			return (0);
+		}
 		ptr = ptr->link;
 	}
 	return (1);
@@ -77,8 +84,10 @@ int	chk_digit(char *num)
 
 int	checker(t_var *p)
 {
-	chk_double(p->stack_a);
-	chk_sorted(p->stack_a, 0);
-
+	if (!chk_double(p->stack_a) || !chk_sorted(p->stack_a, 0))
+	{
+		free_lst(p);
+		exit(0);
+	}
 	return (1);
 }

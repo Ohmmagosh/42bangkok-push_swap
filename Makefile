@@ -6,7 +6,7 @@
 #    By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 00:28:30 by psuanpro          #+#    #+#              #
-#    Updated: 2022/10/11 22:06:49 by psuanpro         ###   ########.fr        #
+#    Updated: 2022/10/13 15:10:57 by psuanpro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRC = push_swap.c \
 	  swap.c \
 	  push.c \
 	  rotate.c \
-	  reverse_rotate.c
+	  reverse_rotate.c \
+	  free.c
 
 LIBDIR = ./libft
 
