@@ -6,12 +6,11 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:22:13 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 22:17:06 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:10:00 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-# include "push_swap.h"
+#include "push_swap.h"
 
 int	chk_argv_sp(char **av)
 {
@@ -52,7 +51,6 @@ int	chk_double(t_lst *p)
 	t_lst	*ptr;
 
 	ptr = p;
-
 	while (ptr)
 	{
 		if (!chk_double_utils(p, ptr->data))

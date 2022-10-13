@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:21:11 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 14:45:32 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 00:56:42 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	sort_5hundred_utils(t_var *p)
 	else if (p->first < 496 && p->v.flag500 >= 449 && p->v.flag500 < 496)
 		mani_stackb_500(p, 473);
 	else
-	 	rotate(p, 0);
+		rotate(p, 0);
 }
 
 void	mani_stackb_500(t_var *p, int mid)
@@ -98,7 +98,7 @@ void	sort_universe_utils_1(t_var *p)
 		else
 			rotate(p, 0);
 	}
-	else 
+	else
 	{
 		if (p->first == p->v.nmin)
 			swap(p, 0);

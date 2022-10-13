@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:03:39 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 21:43:25 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:09:24 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	free_three_di(t_var *p)
 
 void	free_lst(t_var *p)
 {
-	t_lst *tmp;
+	t_lst	*tmp;
 
 	while (p->stack_a)
 	{

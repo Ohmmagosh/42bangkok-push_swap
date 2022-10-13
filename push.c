@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 01:49:23 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/04 04:26:25 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:07:06 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,14 @@ void	push_b(t_var *p, int mode)
 		ft_printf("pb\n");
 }
 
-void	push_a(t_var *p , int mode)
+void	push_a(t_var *p, int mode)
 {
 	if (!p->stack_b)
 	{
 		ft_printf("pa\n");
 		return ;
 	}
-	got_stack(p,1);
+	got_stack(p, 1);
 	if (mode == 1)
 		ft_printf("pa\n");
 }

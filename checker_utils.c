@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 02:26:31 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 00:05:29 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:10:45 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	chk_double_utils(t_lst *p, int data)
 {
 	t_lst	*ptr;
-	int	len;
+	int		len;
 
 	len = 0;
 	ptr = p;
@@ -45,14 +45,14 @@ int	error_re(int mode, t_var *p)
 	{
 		free_three_di_utils(p);
 		free_lst(p);
-		ft_putstr_fd("Error1\n", 2);
+		ft_putstr_fd("Error\n", 2);
 	}
 	exit (0);
 }
 
 int	chk_sorted(t_lst *p, int mode)
 {
-	t_lst *ptr;
+	t_lst	*ptr;
 
 	ptr = p;
 	ptr = ptr->link;
@@ -63,19 +63,19 @@ int	chk_sorted(t_lst *p, int mode)
 			ptr = ptr->link;
 			p = p->link;
 			if (ptr == NULL && mode == 0)
-				return(0);
+				return (0);
 			else if (ptr == NULL && mode == 1)
 				return (0);
 		}
 		else
-			break;
+			break ;
 	}
 	return (1);
 }
 
 int	ft_atoi_ps(const char *str, t_var *p)
 {
-	int					opt;
+	int		opt;
 	long	number;
 
 	number = 0;
@@ -113,6 +113,6 @@ void	chk_onearg(t_var *p)
 		while (p->av[i][++j])
 			len++;
 	}
-	if (len == 2 || len == 1)
+	if (len == 1)
 		error_re(0, p);
 }

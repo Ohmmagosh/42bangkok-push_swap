@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 03:59:36 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/11 20:03:51 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:03:43 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	setintdex(t_var *p, int mode)
 	{
 		p->first = find_pos(p->stack_b, 0);
 		p->secound = find_pos(p->stack_b, 1);
-		p->last = find_pos(p->stack_b,2);
+		p->last = find_pos(p->stack_b, 2);
 	}
 	else if (mode == 2)
 	{
@@ -59,12 +59,12 @@ int	find_pos(t_lst *p, int mode)
 	{
 		if (mode == 0)
 			return (p->data);
-		else if(mode == 1)
+		else if (mode == 1)
 		{
 			p = p->link;
 			return (p->data);
 		}
-		else if(mode == 2)
+		else if (mode == 2)
 		{
 			if (p->link == NULL)
 				return (p->data);
@@ -97,7 +97,7 @@ void	find_value(t_var *p, int mode)
 int	find_minmax(t_lst *p, int mode)
 {
 	int	tmp;
-	
+
 	tmp = p->data;
 	while (p)
 	{

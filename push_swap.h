@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 22:38:25 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:12:35 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include "./libft/libft.h"
 
-typedef struct	s_val
+typedef struct s_val
 {
 	int		min;
 	int		max;
@@ -31,10 +31,10 @@ typedef struct	s_val
 	int		flaguni;
 }				t_val;
 
-typedef struct	s_lst
+typedef struct s_lst
 {
-	int		pos;
-	int		data;
+	int				pos;
+	int				data;
 	struct s_lst	*link;
 }				t_lst;
 
@@ -49,7 +49,6 @@ typedef struct s_var
 	int		first;
 	int		secound;
 	int		last;
-	
 }				t_var;
 
 t_lst	*first_lst(t_var *p, int data);
@@ -64,7 +63,7 @@ int		chk_double_utils(t_lst *p, int data);
 int		chk_sorted(t_lst *p, int mode);
 int		error_re(int mode, t_var *p);
 void	init_push_swap(t_var *p);
-void	get_argv(t_var *p,char **av, int ac);
+void	get_argv(t_var *p, char **av, int ac);
 void	create_lst(t_var *p);
 void	next_lst(t_var *p, int data);
 void	sort(t_var *p);

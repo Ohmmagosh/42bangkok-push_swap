@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 01:43:26 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/12 16:42:47 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 00:56:04 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	swap(t_var *p, int mode)
 {
 	if (mode == 0)
-		swap_a(p , 1);
+		swap_a(p, 1);
 	else if (mode == 1)
 		swap_b(p, 1);
 	else if (mode == 2)
@@ -63,4 +63,3 @@ void	swap_ab(t_var *p, int mode)
 	if (mode == 1)
 		ft_printf("ss\n");
 }
-

@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 18:05:25 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 22:02:12 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:08:20 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	get_argv(t_var *p, char **av, int ac)
 {
-	int i = -1;
+	int	i;
 
+	i = -1;
 	p->av = (char ***)malloc(sizeof(char **) * (ac + 1));
 	if (!p->av)
 		return ;
@@ -26,7 +27,7 @@ void	get_argv(t_var *p, char **av, int ac)
 
 void	next_lst(t_var *p, int data)
 {
-	t_lst *ptr;
+	t_lst	*ptr;
 
 	ptr = (t_lst *)malloc(sizeof(t_lst));
 	ptr->data = data;

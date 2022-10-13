@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:02:03 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/12 14:32:24 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 00:58:16 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	sort_hundred_utils(t_var *p)
 	else if (p->first < 96 && p->v.flag100 >= 76 && p->v.flag100 < 96)
 		mani_stackb(p, 68);
 	else
-	 	rotate(p, 0);
+		rotate(p, 0);
 }
 
 void	set_static(t_var *p)
@@ -67,7 +67,7 @@ void	set_static(t_var *p)
 		counter++;
 		tmp = find_lst(p->stack_a, p->v.nmin);
 		tmp->pos = counter;
-		p->v.nmin = find_nextmin(p->stack_a, p->v.nmin);	
+		p->v.nmin = find_nextmin(p->stack_a, p->v.nmin);
 	}
 }
 
@@ -76,7 +76,7 @@ t_lst	*find_lst(t_lst *p, int data)
 	while (p)
 	{
 		if (p->data == data)
-			break;
+			break ;
 		p = p->link;
 	}
 	return (p);

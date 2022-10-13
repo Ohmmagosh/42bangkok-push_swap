@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 04:39:38 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/05 16:37:26 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:06:11 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	rotate(t_var *p, int mode)
 	else if (mode == 1)
 		rotate_b(p, 1);
 	else if (mode == 2)
-		rotate_ab(p ,2);
+		rotate_ab(p, 2);
 	else if (mode == 3)
 		reverse_rotate_a(p, 1);
 	else if (mode == 4)
@@ -37,13 +37,13 @@ t_lst	*lstlast(t_lst *p, int mode)
 		return (NULL);
 	if (mode == 0)
 	{
-		while(p->link)
+		while (p->link)
 			p = p->link;
 		tmp = p;
 	}
-	else if(mode == 1)
+	else if (mode == 1)
 	{
-		while(p->link->link)
+		while (p->link->link)
 			p = p->link;
 		tmp = p;
 	}

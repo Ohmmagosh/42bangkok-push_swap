@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 03:43:34 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 14:45:05 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:05:04 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,16 +67,15 @@ void	sort_five(t_var *p)
 	{
 		if (p->v.flag != 2)
 			sort_five_utils(p);
-		else if (chk_sorted( p->stack_a, 1) == 0 && p->v.flag == 2)
+		else if (chk_sorted(p->stack_a, 1) == 0 && p->v.flag == 2)
 			push(p, 0);
 		else
-		 	sort_three(p);
+			sort_three(p);
 	}
 }
 
 void	sort_universe(t_var *p, int len)
 {
-	
 	p->v.flaguni = 0;
 	while (chk_sorted(p->stack_a, 1) == 1 || lenlst(p->stack_a) != len)
 	{
@@ -88,5 +87,3 @@ void	sort_universe(t_var *p, int len)
 			sort_three(p);
 	}
 }
-
-
