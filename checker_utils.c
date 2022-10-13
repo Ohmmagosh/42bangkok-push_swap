@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 02:26:31 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 23:22:13 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 00:05:29 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int	error_re(int mode, t_var *p)
 {
 	if (mode == 0)
 	{
-		free_three_di(p);
+		free_three_di_utils(p);
+		free_lst(p);
 	}
 	else if (mode == 1)
 		ft_putstr_fd("Error\n", 2);
@@ -44,7 +45,7 @@ int	error_re(int mode, t_var *p)
 	{
 		free_three_di_utils(p);
 		free_lst(p);
-		ft_putstr_fd("Error\n", 2);
+		ft_putstr_fd("Error1\n", 2);
 	}
 	exit (0);
 }
@@ -93,7 +94,7 @@ int	ft_atoi_ps(const char *str, t_var *p)
 		number += *str - 48;
 		str++;
 	}
-	if (number > 2147483647 || number < -2147483648 )
+	if ((number * opt) > 2147483647 || (number * opt) < -2147483648)
 		return (error_re(3, p));
 	return (opt * number);
 }
@@ -112,6 +113,6 @@ void	chk_onearg(t_var *p)
 		while (p->av[i][++j])
 			len++;
 	}
-	if (len == 2)
+	if (len == 2 || len == 1)
 		error_re(0, p);
 }
