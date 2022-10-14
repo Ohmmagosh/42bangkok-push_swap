@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:34:43 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 21:04:28 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 23:17:25 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,5 @@ int	main(int ac, char **av)
 		sort(&p);
 		free_lst(&p);
 	}
-	else
-		ft_putstr_fd("Error\n", 2);
 	return (0);
 }

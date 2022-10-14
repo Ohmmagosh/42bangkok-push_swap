@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 22:21:50 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 22:43:12 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 23:07:20 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	read_input_utils_1(t_var *p, int num)
 		reverse_rotate_a(p, 0);
 	else if (ft_strncmp(p->b.str, "rrb\n", 4) == 0 && read_cond(p))
 		reverse_rotate_b(p, 0);
-	else if (ft_strncmp(p->b.str, "rrr\n", 4) == 0 && read_cond(p))
+	else if (ft_strncmp(p->b.str, "rrr\n", 4) == 0)
 		reverse_rotate_ab(p, 0);
 	else
 		num = 1;
