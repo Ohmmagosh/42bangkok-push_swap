@@ -6,7 +6,7 @@
 #    By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 00:28:30 by psuanpro          #+#    #+#              #
-#    Updated: 2022/10/14 17:16:40 by psuanpro         ###   ########.fr        #
+#    Updated: 2022/10/14 22:22:48 by psuanpro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC = push_swap.c \
 	  free.c
 
 SRC_BONUS = checker_bonus.c \
+			checker_bonus_utils.c \
 			get_argv.c \
 			chk.c \
 			checker_utils.c \
@@ -57,13 +58,14 @@ COMPILE_BONUS = echo "Push_swap bonus Compiled..."
 
 $(NAME):
 	@make -C $(LIBDIR)
-	@$(CC) $(CFLAGS) $(SRC) -o $(NAME) $(INCLUDE) -g
+	@$(CC) $(CFLAGS) $(SRC) -o $(NAME) $(INCLUDE)
 	@$(COMPILE)
 
 all: $(NAME)
 
-bonus:
+bonus: all
 	@$(CC) $(CFLAGS) $(SRC_BONUS) -o $(NAME_BONUS) $(INCLUDE)
+	@$(COMPILE_BONUS)
 
 clean:
 	@rm -rf $(OBJS)
@@ -72,7 +74,7 @@ clean:
 fclean: clean
 	@rm -rf $(NAME) $(NAME_BONUS)
 	@make -C $(LIBDIR) fclean
-	@rm -rf push_swap.dYSM
+	@rm -rf *.dSYM
 
 re: fclean all
 

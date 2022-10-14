@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:33:17 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 21:02:30 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 22:43:55 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ typedef struct s_var
 	int		secound;
 	int		last;
 }				t_var;
-
 
 t_lst	*first_lst(t_var *p, int data);
 t_lst	*lstlast(t_lst *p, int mode);
@@ -126,5 +125,7 @@ void	free_success(t_var *p);
 void	chk_onearg(t_var *p);
 void	read_input(t_var *p);
 int		checker_bonus(t_var *p);
+void	read_input_utils(t_var *p);
+int		read_input_utils_1(t_var *p, int num);
 
 #endif
