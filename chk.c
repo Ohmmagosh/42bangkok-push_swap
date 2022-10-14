@@ -6,21 +6,27 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:22:13 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 01:10:00 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 21:05:30 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
 #include "push_swap.h"
 
-int	chk_argv_sp(char **av)
+int	chk_argv_sp(char **av, int mode)
 {
 	int	i;
 
 	i = -1;
 	while (av[++i])
 	{
-		if (av[i][0] == '\0')
+		if (av[i][0] == '\0' && mode == 0)
 			return (0);
+		else if (av[i][0] == '\0' && mode == 1) 
+		{
+			ft_putstr_fd("Error\n", 2);
+			return (0);
+		}
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:34:43 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/13 23:34:08 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 21:04:28 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int ac, char **av)
 	{
 		init_push_swap(&p);
 		get_argv(&p, av, ac);
-		if (!chk_argv(p.av + 1) || !chk_argv_sp(av + 1))
+		if (!chk_argv(p.av + 1) || !chk_argv_sp(av + 1, 0))
 		{
 			free_three_di(&p);
 			return (0);
