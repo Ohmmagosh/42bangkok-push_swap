@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 02:36:09 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 23:08:51 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 23:55:23 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	reverse_rotate_a(t_var *p, int mode)
 	t_lst	*tmp;
 	t_lst	*tmpl;
 
-	if (!p->stack_a)
+	if (lenlst(p->stack_a) < 2)
 		return ;
 	tmpl = lstlast(p->stack_a, 0);
 	tmp = lstlast(p->stack_a, 1);
@@ -33,7 +33,7 @@ void	reverse_rotate_b(t_var *p, int mode)
 	t_lst	*tmp;
 	t_lst	*tmpl;
 
-	if (!p->stack_b)
+	if (lenlst(p->stack_b) < 2)
 		return ;
 	tmpl = lstlast(p->stack_b, 0);
 	tmp = lstlast(p->stack_b, 1);
