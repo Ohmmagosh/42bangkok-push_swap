@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:22:13 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 21:05:30 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/14 21:21:03 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	chk_argv_sp(char **av, int mode)
 	{
 		if (av[i][0] == '\0' && mode == 0)
 			return (0);
-		else if (av[i][0] == '\0' && mode == 1) 
+		else if (av[i][0] == '\0' || av[i][0] == ' ' && mode == 1) 
 		{
 			ft_putstr_fd("Error\n", 2);
 			return (0);
