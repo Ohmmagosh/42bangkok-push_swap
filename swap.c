@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 01:43:26 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 00:56:04 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/15 00:33:27 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,8 @@ void	swap_a(t_var *p, int mode)
 {
 	t_lst	*tmp;
 
-	if (!p->stack_a)
-	{
-		ft_printf("sa\n");
+	if (lenlst(p->stack_a) < 2)
 		return ;
-	}
 	tmp = p->stack_a->link;
 	p->stack_a->link = p->stack_a->link->link;
 	tmp->link = p->stack_a;

@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 04:39:38 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/10/14 01:06:11 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/10/17 18:48:49 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void	rotate_a(t_var *p, int mode)
 	t_lst	*tmpl;
 	t_lst	*tmp;
 
+	if (lenlst(p->stack_a) < 2)
+		return ;
 	tmpl = lstlast(p->stack_a, 0);
 	tmp = p->stack_a;
 	p->stack_a = p->stack_a->link;
@@ -69,6 +71,8 @@ void	rotate_b(t_var *p, int mode)
 	t_lst	*tmpl;
 	t_lst	*tmp;
 
+	if (lenlst(p->stack_b) < 2)
+		return ;
 	tmpl = lstlast(p->stack_b, 0);
 	tmp = p->stack_b;
 	p->stack_b = p->stack_b->link;
@@ -79,7 +83,7 @@ void	rotate_b(t_var *p, int mode)
 }
 
 void	rotate_ab(t_var *p, int mode)
-{
+{	
 	rotate_a(p, 0);
 	rotate_b(p, 0);
 	if (mode == 1)
